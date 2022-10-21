@@ -15,6 +15,8 @@ There are two things required from the user apart from being able to type `docke
 More details about the development and debugging of this image can be found [here](https://silverbullets/ci-cd/containerising-postfix-with-opendkim).
 
 ## Test
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fployt0%2Fpostfix-dkim.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fployt0%2Fpostfix-dkim?ref=badge_shield)
+
 
 Please install `opendkim-tools`. Test using, eg:
 
@@ -29,3 +31,7 @@ It's a cool tool for checking your own key is right. Key management, by it's rep
 ## Demo
 
 <video src="https://user-images.githubusercontent.com/25666053/196518942-1ad4d7bc-0560-4ef4-8556-25fc5314f236.mp4"></video>
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fployt0%2Fpostfix-dkim.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fployt0%2Fpostfix-dkim?ref=badge_large)
