@@ -63,7 +63,11 @@ RUN \
 
 RUN \
   sed -Ei "s/^#* *Socket\t(.*)$/#Socket\1/" /etc/opendkim.conf && \
-  sed -Ei "s/^#* *Socket\t(.*)(inet:8891@localhost)$/Socket\t\1\2/" /etc/opendkim.conf
+  sed -Ei "s/^#* *Socket\t(.*)(inet:8891@localhost)$/Socket\t\1\2/" /etc/opendkim.conf && \
+  if [ "$DOMAIN_NAME" != "localhost" ] &&  [ "$DOMAIN_NAME" != "example.com" ]; then \
+    postconf -e "smtpd_tls_cert_file = /etc/letsencrypt/live/$DOMAIN_NAME/fullchain.pem" && \
+    postconf -e "smtpd_tls_key_file = /etc/letsencrypt/live/$DOMAIN_NAME/privkey.pem"; \
+  fi
 
 
 CMD service rsyslog start && service opendkim start && service postfix start && tail -F /var/log/mail.log
