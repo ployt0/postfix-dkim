@@ -29,6 +29,17 @@ Check `$?` for return code. `-vvv` can reveal errors even with a zero return cod
 
 It's a cool tool for checking your own key is right. Key management, by its repetitive nature, is rather prone to careless human error.
 
+## Non-test
+
+Don't be alarmed that the DKIM service isn't running:
+
+```shell
+root@silverbullets:/# service opendkim status
+opendkim is not running ... failed!
+```
+
+This doesn't impact the other services. I can still send emails which "PASS" Gmail's **DKIM authentication** check.
+
 ## Demo
 
 This is version 0.1, before TLS.
